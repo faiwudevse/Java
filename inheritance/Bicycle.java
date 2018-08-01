@@ -1,4 +1,4 @@
-package com.java.oop;
+package com.java.oop.inheritance;
 
 public class Bicycle {
 

@@ -1,4 +1,6 @@
-package com.java.oop;
+package com.java.oop.inheritance;
+
+import com.java.oop.inheritance.Bicycle;
 
 public class MountainBike extends Bicycle {
 

@@ -3,10 +3,12 @@ package com.java.oop;
 import com.java.oop.encapsulation.Encapsulate;
 import com.java.oop.inheritance.MountainBike;
 import com.java.oop.inheritance.Bicycle;
+import com.java.oop.interfaceclass.CFC;
 import com.java.oop.polymorphism.Car;
 import com.java.oop.polymorphism.DemoOverload;
 import com.java.oop.polymorphism.MotorBike;
 import com.java.oop.polymorphism.Vehicle;
+import com.java.oop.abstraction.*;
 
 public class Main {
 
@@ -15,7 +17,9 @@ public class Main {
 
         //inheritanceDemo();
         //staticPolymorphismDemo();
-        dynamicPolymorphismDemo();
+        //dynamicPolymorphismDemo();
+        //abstaractionDemo();
+        interfaceDemo();
     }
 
     // the advantage of using inhereitance is reusability.
@@ -117,5 +121,52 @@ public class Main {
         // System.out.println("Geek's roll: " + obj.geekName);
 
     }
+
+    /*
+    Data Abstraction is the property by virtue of which only the essential details are displayed to the user. Data Abstraction may also be defined the process of identifying only the required
+  charateristics of an object ignoring the irrelevant details.
+
+    There are situations in which we will want to define a superclass that declares the structure of a given abstraction without providing a complete implementation of every method.
+     */
+    public static void abstaractionDemo() {
+        Shape s1 = new Circle("Red", 2.2);
+        Shape s2 = new Rectangle("Yellow", 2, 4);
+
+        System.out.println(s1.toString());
+        System.out.println(s2.toString());
+    }
+
+    /*
+     Interface is also using as abstraction. And it has only allowed abstract method
+     An interface is an empty shell. There are only the abstract method
+     */
+    public static void interfaceDemo(){
+        CFC.useInterface();
+    }
+    /*
+    Abstract class
+    1. Abstract class can have abstract and non-abstract methods.
+    2. Abstract class doesn't support multiple inheritance.
+    3. Abstract class can have final, non-final, static and non-static variables.
+    4. Abstract class can provide the implementation of interface.
+
+    Interface
+    1. Interface can have default, static and abstract methods.
+    2. Interface supports multiple inheritance.
+    3. Interface has only static and final variables.
+    4. Interface can't provide the implementation of abstract class.
+
+     */
+
+    /*
+    Final Variable -> To create constant variables
+    Final Methods -> Prevent Method Overriding
+    Final Classes -> Prevent inheritance
+     */
+
+    public  static void finalKeyWordDemo(){
+
+    }
+
 
 }
